@@ -5,7 +5,7 @@ import { join } from 'path';
 
 async function bootstrap() {
   const app = await NestFactory.create<NestExpressApplication>(AppModule,{cors: true});
-  app.useStaticAssets(join(__dirname, '../images'))
+  // app.useStaticAssets(join(__dirname, '../images'))
   await app.listen(3000);
 }
 bootstrap();

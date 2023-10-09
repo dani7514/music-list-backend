@@ -33,8 +33,7 @@ export class MusicService {
 
 
     async createMusic(music: Music): Promise<Musics>{
-        const popularMovies= new this.musicModel(music);
-        return popularMovies.save()
+        return await this.musicModel.create(music);
     }
 
     async updateMusic (id: string, music: any): Promise<Musics[]> {

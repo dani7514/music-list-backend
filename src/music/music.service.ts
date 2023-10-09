@@ -44,7 +44,9 @@ export class MusicService {
     }
     
     async deleteMusic( id: string) {
-        return await this.musicModel.findByIdAndDelete(id);
+        return await this.musicModel.findByIdAndDelete(id,{
+            returnOriginal: false,
+          });
       }
 
 

@@ -1,5 +1,5 @@
 import {BadRequestException, Body, Controller, Delete,
-     Get, Param, Post, Put, Query, UploadedFile, UseInterceptors,
+     Get, Param, Patch, Post, Put, Query, UploadedFile, UseInterceptors,
       } from '@nestjs/common';
 import { MusicService } from './music.service';
 import { Music } from './dto/musicDto';
@@ -32,7 +32,7 @@ export class MusicController {
         return await this.musicService.addMusics(music)
     }
 
-    @Put('/:id')
+    @Patch('/:id')
     async updateMusic(@Body() music: Music, @Param('id') id: string): Promise<Musics[]>{
         return await this.musicService.updateMusic(id,music);
     }

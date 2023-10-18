@@ -34,6 +34,7 @@ export class MusicController {
 
     @Patch('/:id')
     async updateMusic(@Body() music: Music, @Param('id') id: string): Promise<Musics>{
+        console.log(music, id);
         return await this.musicService.updateMusic(id,music);
     }
 

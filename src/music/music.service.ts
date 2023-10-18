@@ -37,10 +37,10 @@ export class MusicService {
     }
 
     async updateMusic (id: string, music: Music): Promise<Musics> {
-        return await this.musicModel.findByIdAndUpdate(id ,music,
+        return await this.musicModel.findByIdAndUpdate(id, music,
             {
                 returnOriginal: false,
-              })
+            })
     }
     
     async deleteMusic( id: string) {

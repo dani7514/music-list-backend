@@ -36,7 +36,7 @@ export class MusicService {
         return await this.musicModel.create(music);
     }
 
-    async updateMusic (id: string, music: any): Promise<Musics[]> {
+    async updateMusic (id: string, music: Music): Promise<Musics> {
         return await this.musicModel.findByIdAndUpdate(id ,music,
             {
                 returnOriginal: false,

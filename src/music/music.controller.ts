@@ -32,7 +32,7 @@ export class MusicController {
         return await this.musicService.addMusics(music)
     }
 
-    @Put('/:id')
+    @Patch('/:id')
     async updateMusic(@Body() music: Music, @Param('id') id: string): Promise<Musics>{
         return await this.musicService.updateMusic(id,music);
     }

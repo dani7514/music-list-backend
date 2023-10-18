@@ -1,8 +1,9 @@
 import { artist } from "./artistDto";
 
 export class Music {
-    titles: string;
-    length: number;
+    name: string;
+    duration_ms: number;
+    image_url: string;
+    release_date: string;
     artist: artist;
-    image: string;
 }
